@@ -79,7 +79,7 @@ export default {
 					//有登录信息
 					console.log("已登录用户：",value);
 					uni.reLaunch({
-						url: '../../pages/index/index',
+						url: '/pages/index/index',
 					});
 				}
 			} catch (e) {
@@ -133,7 +133,7 @@ export default {
 							title: '登录成功'
 						});
 						uni.reLaunch({
-							url: 'pages/login/login',
+							url: '/pages/index/index'
 						});
 					// }else{
 					

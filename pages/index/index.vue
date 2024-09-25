@@ -16,10 +16,9 @@
 	import {
 		fetch
 	} from '../../utils/fetch';
-	onLoad(() => {
-		//stream
-
-		const eventSource = new EventSource('http://localhost:9527/todo/stream');
+	function stream(){
+		console.log(1)
+		const eventSource = new EventSource('http://47.102.197.217:3005/todo/stream');
 		eventSource.onmessage = ({
 			data
 		}) => {
@@ -31,7 +30,12 @@
 			//console.log('New message', JSON.parse(data));
 			
 		};
+	}
+	onLoad(() => {
+		//stream
+		stream()
 	})
+	
 </script>
 
 <style>

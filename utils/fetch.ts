@@ -14,7 +14,7 @@ uni.addInterceptor('request', {
 	invoke:(args :any)=> {
 		if(args.url.indexOf('http')==-1){
 			
-		args.url = 'http://127.0.0.1:9527/' + args.url
+		args.url = 'http://47.102.197.217:3005/' + args.url
 		}
 		if(!uni.getStorageSync('access_token')&& args.url.indexOf('login')==-1&&args.url.indexOf('refresh')==-1){
 			uni.showToast({
@@ -80,9 +80,9 @@ export function fetch(requestbody : RequestBody) : any {
 
 
 function  GetToken():void{
-	alert(1)
+	
 	if(uni.getStorageSync("refresh_token")){
-		alert(2)
+	
 		//使用refresh_token刷新
 		refresh().then((token)=>{
 			fetch(globalRequestBody)
@@ -95,7 +95,7 @@ function  GetToken():void{
 			return
 		})
 	}else{
-		alert(3)
+	
 		uni.showToast({
 			title:'登录已过期，请重新登录',
 			
