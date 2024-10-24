@@ -1,6 +1,37 @@
 <template>
 	<view class="content">
-		
+		<div class="head">
+			<img src="./img/icon_cb.png" alt="" srcset="">
+			日程
+			<img src="./img/icon_search.png" alt="" srcset="">
+		</div>
+
+
+
+		<div class="calendar">
+			<div class="title">
+				<img src="./img/icon_left.png" alt="" srcset="">
+				2024年9月
+				<img src="./img/icon_right.png" alt="" srcset="">
+			</div>
+			<div class="contentbox">
+				<div class="weeks">
+					<div class="week">一</div>
+					<div class="week">二</div>
+					<div class="week">三</div>
+					<div class="week">四</div>
+					<div class="week">五</div>
+					<div class="week">六</div>
+					<div class="week">日</div>
+				</div>
+
+				<div class="days">
+					<div class="day" v-for="(item,index) in 42">{{ index }}</div>
+	
+				</div>
+			</div>
+
+		</div>
 
 	</view>
 </template>
