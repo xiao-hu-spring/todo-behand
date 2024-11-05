@@ -74,10 +74,39 @@
 				display: flex;
 				flex-wrap: wrap;
 				.day{
-					height: 30px;
-					width: 50.72px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					height: 45px;
+					width: 14.28%;
+					text-align: center;
+					.cell{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 15px;
+						width: 28px;
+						height: 28px;
+						border-radius: 50%;
+						
+						font-weight: 700;
+					}
+					.today{
+						background-color: #1A7FE8;
+						color: #fff;
+					}
+					.chose{
+						background-color:#00bfff;
+						color: #fff;
+					}
+				}
+				.b,.e{
+					color: #d5d5d5;
 				}
 			}
 		}
 	}
+}
+ .swiper{
+	height: 270px !important;
 }
